@@ -21,8 +21,12 @@ async def save_group(bot, message):
             await db.add_chat(message.chat.id, message.chat.title)
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
-            buttons = [[
-                InlineKeyboardButton('Support', url=f'https://t.me/{SUPPORT_CHAT}')
+            buttons = [[    
+            InlineKeyboardButton('💬 Join Our Group 💬',url='https://t.me/discussion_hd_movies')],
+            [
+            InlineKeyboardButton('😄 Join Our Channel 😄', url='https://t.me/tamil_links_official')
+            ],[
+            InlineKeyboardButton('🔎 Search Here Movies 🔎', switch_inline_query_current_chat='')
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
@@ -36,10 +40,13 @@ async def save_group(bot, message):
                 pass
             await bot.leave_chat(message.chat.id)
             return
-        buttons = [[
-            InlineKeyboardButton('ℹ️ Help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('📢 Updates', url='https://t.me/TeamEvamaria')
-        ]]
+        buttons = [[    
+            InlineKeyboardButton('💬 Join Our Group 💬',url='https://t.me/discussion_hd_movies')],
+            [
+            InlineKeyboardButton('😄 Join Our Channel 😄', url='https://t.me/tamil_links_official')
+            ],[
+            InlineKeyboardButton('🔎 Search Here Movies 🔎', switch_inline_query_current_chat='')
+            ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
             text=f"<b>Thankyou For Adding Me In {message.chat.title} ❣️\n\nIf you have any questions & doubts about using me contact support.</b>",
