@@ -639,29 +639,29 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"😁 Here Is What I Found For Your #{search}  \n\n<b>😴🥱: This Message Will Be Auto-Deleted After 1 #Minutes To Avoid #Copyright Issues.</b>\n\n<b>🪜 Enter A Correct Spelling To Get A Movie \n\n<code>😵 Eg: Master 2021 / MAster Tamil / Master</code> "
+        cap = f"😁 Here Is What I Found For Your #{search}  \n\n<b>😴🥱: This Message Will Be Auto-Deleted After 10 #Minutes To Avoid #Copyright Issues.</b>\n\n<b>🪜 Enter A Correct Spelling To Get A Movie \n\n<code>😵 Eg: Master 2021 / MAster Tamil / Master</code> "
     if imdb and imdb.get('poster'):
         try:
             spa = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(60)
+            await asyncio.sleep(1000)
             await spa.delete()
             await message.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             spa1 = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(60)
+            await asyncio.sleep(1000)
             await spa1.delete()
             await message.delete()
         except Exception as e:
             logger.exception(e)
             spa2 = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(60)
+            await asyncio.sleep(1000)
             await spa2.delete()
             await message.delete()
     else:
         spa3 = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(60)
+        await asyncio.sleep(1000)
         await spa3.delete()
         await message.delete()
     if spoll:
