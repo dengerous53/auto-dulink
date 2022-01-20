@@ -646,7 +646,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"😁 Here Is What I Found For Your #{search}  \n\n<b>😴🥱: This Message Will Be Auto-Deleted After 1 #Minutes To Avoid #Copyright Issues.</b>"
+        cap = f"😁 Here Is What I Found For Your #{search}  \n\n<b>😴🥱: This Message Will Be Auto-Deleted After 10 #Minutes To Avoid #Copyright Issues.</b>"
         try:
             spa = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(1000)
