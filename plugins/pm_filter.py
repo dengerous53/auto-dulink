@@ -639,7 +639,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query \n\n<b>🕑 : This message will be Auto-deleted after 10 minutes to avoid #copyright issues.</b>{search}"
+        cap = f"😁 Here Is What I Found For Your #{search}  \n\n<b>😴🥱: This Message Will Be Auto-Deleted After 1 #Minutes To Avoid #Copyright Issues.</b>\n\n<b>🤧🤧 Enter A Correct Spelling To Get A Movie \n\n<code>😵‍💫😵‍💫 Eg: Master 2021 / MAster Tamil / Master</code> "
     if imdb and imdb.get('poster'):
         try:
             spa = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
