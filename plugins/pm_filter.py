@@ -651,22 +651,22 @@ async def auto_filter(client, msg, spoll=False):
         try:
             trvpn4 = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(60)
+            await asyncio.sleep(180)
             await trvpn4.delete()
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
             trvpn = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(60)
+            await asyncio.sleep(180)
             await trvpn.delete()
         except Exception as e:
             logger.exception(e)
             trvpn1 = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(60)
+            await asyncio.sleep(180)
             await trvpn1.delete()
     else:
         trvpn2 = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(60)
+        await asyncio.sleep(180)
         await trvpn2.delete()
     if spoll:
         await msg.message.delete()
