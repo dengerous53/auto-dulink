@@ -667,7 +667,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         trvpn2 = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(60)
-        await trvpn.delete()
+        await trvpn2.delete()
     if spoll:
         await msg.message.delete()
 
