@@ -19,7 +19,7 @@ AUTH_CHANNEL = None
 # MongoDB information
 DATABASE_URI = "mongodb+srv://Tamil_AI_Movies_Bot:Tamil_AI_Movies_Bot@cluster0.uxkht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 DATABASE_NAME = 'Cluster0'
-COLLECTION_NAME = 'Telegram_files'  # If you are using the same database, then use different collection name for each bot
+COLLECTION_NAME = 'Telegram_files1'  # If you are using the same database, then use different collection name for each bot
 
 
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TeamEvamaria')
