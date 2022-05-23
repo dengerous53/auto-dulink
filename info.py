@@ -13,8 +13,8 @@ def is_enabled(value, default):
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(2054877)
-API_HASH = 4227c1e45e462209a3dcc67ada88a44f
-BOT_TOKEN = 5351916457:AAFBm67cOdzKVP6d5nMCnuE2n5K9ggyuq8k
+API_HASH = "4227c1e45e462209a3dcc67ada88a44f"
+BOT_TOKEN = "5351916457:AAFBm67cOdzKVP6d5nMCnuE2n5K9ggyuq8k"
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -32,19 +32,19 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = "mongodb+srv://duke:duke@cluster0.iebnx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-DATABASE_NAME = "Rajappa1n"
-COLLECTION_NAME = 'Telegram_files1'
+DATABASE_URI = "mongodb+srv://Tamil_AI_Movies_Bot:Tamil_AI_Movies_Bot@cluster0.uxkht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+DATABASE_NAME = "Cluster0"
+COLLECTION_NAME = 'Telegram_files'
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TeamEvamaria')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), True)
-SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
+SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", None)
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌‌‌‌IMDb Data:\n\n🏷 Title: <a href={url}>{title}</a>\n🎭 Genres: {genres}\n📆 Year: <a href={url}/releaseinfo>{year}</a>\n🌟 Rating: <a href={url}/ratings>{rating}</a> / 10")
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \nâ€Œâ€Œâ€Œâ€ŒIMDb Data:\n\nðŸ· Title: <a href={url}>{title}</a>\nðŸŽ­ Genres: {genres}\nðŸ“† Year: <a href={url}/releaseinfo>{year}</a>\nðŸŒŸ Rating: <a href={url}/ratings>{rating}</a> / 10")
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
