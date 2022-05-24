@@ -32,8 +32,7 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = "mongodb+srv://Tamil_AI_Movies_Bot:Tamil_AI_Movies_Bot@cluster0.uxkht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-DATABASE_NAME = "Cluster0"
+DATABASE_URI = "mongodb+srv://trvpn:trvpn@cluster0.ve0u8.mongodb.net/?retryWrites=true&w=majority"
 COLLECTION_NAME = 'Telegram_files'
 
 # Others
