@@ -34,7 +34,7 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 # MongoDB information
 DATABASE_URI = "mongodb+srv://trvpn:trvpn@cluster0.ve0u8.mongodb.net/?retryWrites=true&w=majority"
 COLLECTION_NAME = 'Telegram_files'
-
+DATABASE_NAME = "Cluster0"
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'TeamEvamaria')
