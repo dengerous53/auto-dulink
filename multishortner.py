@@ -3,9 +3,11 @@ import requests
 import pyshorteners
 
 
-SHORTENER = 'dulink'
+from info import Config 
 
-SHORTENER_API = 'hghj'
+SHORTENER = Config.SHORTENER 
+
+SHORTENER_API = Config.SHORTENER_API
 
 
 def short_url(longurl):
