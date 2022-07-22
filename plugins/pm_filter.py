@@ -2,7 +2,7 @@
 import asyncio
 import re
 import ast
-
+from multishortner import short_url
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
 import pyrogram
@@ -581,7 +581,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"[{get_size(file.file_size)}] {file.file_name}",  url=short_url(f"https://telegram.dog/{temp.U_NAME}?start={file.file_id}")
                 ),
             ]
             for file in files
